@@ -5,10 +5,39 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
-        msg: "hi",
-        title: "Focus",
-        examples: dbExamples
+
+        msg: "Welcome!",
+        examples: dbExamples,
+        title: "Home"
       });
+    });
+  });
+
+  // Sign in page
+  app.get("/signup", function(req, res) {
+    // If the user already has an accout send them to the timer with options
+    if (req.user) {
+      res.redirect("/theAwesomeTimer");
+    }
+    res.render("signup", {
+      title: "Sign Up"
+    });
+  });
+
+  app.get("/login", function(req, res) {
+    // if user already has an account send themt ot the timer with options
+    if (req.user) {
+      res.redirect("/theAwesomeTimer");
+    }
+    res.render("login", {
+      title: "Log In"
+    });
+  });
+
+  //This is where the logged in users will access the real timer with our features
+  app.get("/theAwesomeTimer", function(req, res) {
+    res.render("theAwesomeTimer", { 
+      title: "The REAL Timer"
     });
   });
 
