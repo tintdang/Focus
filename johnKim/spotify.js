@@ -15,9 +15,11 @@ spotify.search({type: 'track', query: song}, function(err, data){
 
     request.post({
         url: 'https://api.spotify.com/v1/playlists/24eowb9lZkZezxXVxpm4cp/tracks?uris=' + data.tracks.items[0].uri,
-        data: {uris: data.tracks.items[0].uri},
+        data: {},
         headers: {
-            Authorization: "Bearer " + token
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         }
     }
     , function(err, res, body){
