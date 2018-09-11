@@ -1,30 +1,29 @@
 $(document).ready(function() {
     var signUpForm = $("form.signup");
-    var email = $("#email").val();
-    var password = $("#password").val();
 
     // When the form is submitted, check if there is valid email and password entered
     signUpForm.on("submit", function(event) {
         event.preventDefault();
         var userData = {
-            email: email.val().trim(),
-            password: password.val().trim()
+            email: $("#email").val().trim(),
+            password: $("#password").val().trim()
         };
 
         if(!userData.email || !userData.password) {
             return;
         }
         // Clear the form if we have a valid input and send the ajax post call function as defined below
-        signUpUser(userData.email, userData.password);
+        signUpUser(userData);
         $("#email").val("");
         $("#password").val("");
     });
 
     // post the user info to api/login route and if successful it will redirect us to the awesometimer!
-    function signUpUser(email, password) {
+    function signUpUser(userData) {
+        console.log(userData)
         $.post("/api/signup", {
-            email: email,
-            password: password
+            email: userData.email,
+            password: userData.password
         }).then(function(data) {
             window.location.replace(data);
             //if error throw a bootstrap alert
