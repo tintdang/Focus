@@ -4,24 +4,22 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <!-- Compiled and minified Materialize CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    <!-- Custom CSS Styling -->
-    <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <!-- Custom CSS Styling -->
+  {{{customcss}}}
   <title>{{title}}</title>
 </head>
 
 <body>
 
-	<div class="container-fluid">
-    <center>
-      <div class="row">
-      <img src="../../public/images/focus.jpg" alt="Focus">    
-    </center>
+      {{!-- <center>
+        <div class="row">
+          <img src="../../public/images/focus.jpg" alt="Focus">
+      </center> --}}
 
-  {{{body}}}
- </div>
+    {{{body}}}
+  </div>
 </body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{{{customjs}}}
 
 </html>

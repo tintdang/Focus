@@ -4,5 +4,6 @@ module.exports = function (req, res, next) {
   if (req.user) {
     return next();
   }
+  // if they aren't logged in just send them over to sign up.
   return res.redirect("/signup");
 };

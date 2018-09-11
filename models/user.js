@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
         return bcrypt.compareSync(password, this.password);
     };
     // This runs before the user is created, This is hashing our password before it's entered into the database
-    User.hook("beforeCreate", function(User){
+    User.hook("beforeCreate", function(user){
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
     return User;
