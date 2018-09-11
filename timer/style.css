@@ -1,0 +1,17 @@
+body {
+    background: no-repeat center center fixed;
+    background-color: rgb(218, 218, 218);
+    background-size: cover;
+    height: 100%;
+}
+
+.box-style {
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 250px;
+    padding: 50px;
+    background: rgba(231, 234, 237, 0.75);
+    color: black;
+}
