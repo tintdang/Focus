@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ajax-request": "^1.2.3",
     "dotenv": "^6.0.0",
     "node-fetch": "^2.2.0",
     "node-spotify-api": "^1.0.7"
