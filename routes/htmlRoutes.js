@@ -1,4 +1,6 @@
 var db = require("../models");
+// requring the custom middleware to check if the user is logged in.
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
   // Load index page
@@ -34,11 +36,15 @@ module.exports = function(app) {
   });
 
   //This is where the logged in users will access the real timer with our features
-  app.get("/theAwesomeTimer", function(req, res) {
+  //The middleware prevents anybody trying to access the URL directly to be redirected to the signup page
+  app.get("/theAwesomeTimer", isAuthenticated, function(req, res) {
     res.render("theAwesomeTimer", { 
       title: "The REAL Timer"
     });
   });
+
+  
+  app.get()
 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
