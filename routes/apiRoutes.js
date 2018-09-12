@@ -10,7 +10,7 @@ module.exports = function (app) {
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     console.log("hit api/login post route");
 
-    res.json("/theAwesomeTimer");
+    res.json("/home");
   });
 
   app.post("/api/signup", function (req, res) {
@@ -43,7 +43,7 @@ module.exports = function (app) {
       }
 
       console.log(data.tracks.items[0].uri);
-      var token = "BQD-hx-R5anxqTmXsmDMAQT3vPHZFO-nZSNA8DBaoH7EN9Hu4wbkBreO69W0_DHA1Vw6Nfyf90FKUgjWl8XZenaftMg6IneJpqqQBLGd0DQm4SAMXIDoU3ueROsfccOu9Ho3KE7TQfJxTevL3K19rVG9Vozed0i7LoMaC58gZ7PFmlukpnA";
+      var token = "BQAZG3mF5PrH-hqy9IvucY9Y30LT0pRGP9CgflMSUQqr-rEwBEdlK3qUt_hTpfCkCbNLXGWW4DzvfmujF7SiYkbLSGFUA51kThuKlhXI3eI7MNo1uDZHPiz-PRicITeqNpfmKQXbs9J5CmjsEcNbkhbKgVyM5a2OXCurkJ5Gzddv5ZwKyOc";
 
       fetch('https://api.spotify.com/v1/playlists/24eowb9lZkZezxXVxpm4cp/tracks?uris=' + data.tracks.items[0].uri, {
           headers: {
@@ -52,7 +52,8 @@ module.exports = function (app) {
           contentType: 'application/json',
           method: 'POST'
       }).then(success => {
-      console.log(success);
+        console.log(success);
+        res.json("/theAwesomeTimer");
       }).catch(err => {
           console.log('here is your error', err);
       })

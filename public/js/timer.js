@@ -12,11 +12,11 @@ $(document).ready(function () {
 ///////////////////////////////////////////////////////////////
 // FOCUS TIMER
 ///////////////////////////////////////////////////////////////
-$("#start-button").on('click', function () {
+$("#start-button").on("click", function () {
     $("#start-page").hide();
     $("#focus-timer").show();
     var duration = 1;
-    var display = document.querySelector('#focus-time');
+    var display = document.querySelector("#focus-time");
     focusTimer(duration, display);
 });
 
@@ -32,7 +32,7 @@ function focusTimer(duration, display) {
 
         // display.textContent = displayTime;
         // setTimeout(function () {
-        display.textContent = minutes + ":" + seconds
+        display.textContent = minutes + ":" + seconds;
         // }, 1000);
 
         if (--timer < 0) {
@@ -48,12 +48,12 @@ function focusTimer(duration, display) {
 ///////////////////////////////////////////////////////////////
 
 
-$("#break-button").on('click', function () {
+$("#break-button").on("click", function () {
     console.log("click");
     $("#break-page").hide();
     $("#break-timer").show();
     var duration = 1;
-    var display = document.querySelector('#break-time');
+    var display = document.querySelector("#break-time");
     breakTimer(duration, display);
 });
 
@@ -71,7 +71,7 @@ function breakTimer(duration, display) {
 
         // display.textContent = displayTime;
         // setTimeout(function () {
-        display.textContent = minutes + ":" + seconds
+        display.textContent = minutes + ":" + seconds;
         // }, 1000);
 
         if (--timer < 0) {
@@ -85,4 +85,4 @@ function breakTimer(duration, display) {
 // TIMER STOP
 function stop(clearTimer) {
     clearInterval(clearTimer);
-};
+}
