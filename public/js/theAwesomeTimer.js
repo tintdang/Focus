@@ -64,7 +64,7 @@ function focusTimer(duration) {
         }
         
     }, 1000);
-}
+
 
 ///////////////////////////////////////////////////////////////
 // ADJUSTED BREAK TIME
@@ -116,6 +116,7 @@ function breakTimer(duration) {
             $("#start-page").show();
         }
     }, 1000);
+
 }
 
 ///////////////////////////////////////////////////////////////
@@ -123,4 +124,3 @@ function breakTimer(duration) {
 ///////////////////////////////////////////////////////////////
 function stop(clearTimer) {
     clearInterval(clearTimer);
-}
