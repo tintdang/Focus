@@ -9,16 +9,24 @@ module.exports = function (app) {
   });
 
   app.post("/api/signup", function (req, res) {
-    console.log(req.body);
-    db.User.create({
-      email: req.body.email,
-      password: req.body.password
-    }).then(function () {
-      res.redirect(307, "/api/login");
-    }).catch(function (err) {
-      console.log(err);
-      res.json(err);
-      // res.status(422).json(err.errors[0].message);
+    // check if user email is created.
+    // console.log(req.body);
+    db.User.findOne({
+      where: {email: req.body.email}
+    }).then(function(existingEmail) {
+      if (existingEmail) {
+        return res.json(`The email: ${req.body.email} has been taken`)
+      } else {
+        db.User.create({
+          email: req.body.email,
+          password: req.body.password
+        }).then(function () {
+          res.redirect(307, "/api/login");
+        }).catch(function (err) {
+          console.log(err);
+          res.json(err);
+        });
+      }
     });
   });
 
