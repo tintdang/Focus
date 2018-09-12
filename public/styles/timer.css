@@ -1,0 +1,14 @@
+body {
+    background: url(../img/timer.jpg);
+    background-size: cover;
+}
+.box-style {
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 250px;
+    padding: 50px;
+    background: rgba(231, 234, 237, 0.75);
+    color: black;
+}
