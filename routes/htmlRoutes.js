@@ -45,8 +45,11 @@ module.exports = function (app) {
       customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
       customjs: `<script type="text/javascript" src="/js/theAwesomeTimer.js"></script>`
     });
-
   });
+
+  app.get("/home", isAuthenticated, function (req, res) {
+
+  })
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
