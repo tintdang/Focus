@@ -3,15 +3,65 @@
     <div class="row">
       <div class="col-8 offset-2">
 
-        <h2>This is our Home Page!</h2>
-        <h1>Just the timer goes here</h1>
-        <a href="/signup">Sign Up Here</a>
-        <a href="/login">Login Here</a>
+        {{!-- put these in a navbar or something inside the start page --}}
+
+        <!-- START PAGE -->
+        <div class="container container-fluid box-style" id="start-page">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="display-4">Focus!</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <hr class="my-4">
+              <p class="lead">Focus for 52 minutes</p>
+              <a class="btn btn-secondary btn-lg" id="start-button" role="button">Start timer</a>
+              <p>If you want to access the full timer features, please sign up or login</p>
+              <p>
+                <a href="/signup">Sign Up Here</a>
+                <a href="/login">Login Here</a>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- FOCUS TIMER PAGE -->
+        <div class="container container-fluid box-style" id="focus-timer">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="display-4">Keep focusing for <span id="focus-time">52:00</span> minutes!</h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREAK OPTIONS PAGE -->
+        <div class="container container-fluid box-style" id="break-page">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="display-4">Break Time!</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <hr class="my-4">
+              <p class="lead">Here are some suggestions for what to do with your break:</p>
+              <a class="btn btn-secondary btn-lg" id="break-button" role="button">Begin Break</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREAK TIMER PAGE -->
+        <div class="container container-fluid box-style" id="break-timer">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="display-4">Take a break for <span id="break-time">17:00</span> minutes!</h1>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
 </div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>

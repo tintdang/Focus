@@ -1,0 +1,48 @@
+<!-- ADJUST BREAK PAGE -->
+<div class="container container-fluid box-style" id="adjust-break-page">
+    <div class="row">
+        <div class="col-12">
+            <form>
+                <div class="form-group">
+                    <h1 class="display-5">Adjust Break</h1>
+                    <label for="adjust-break">New break time (minutes)</label>
+                    <input type="text" class="form-control" id="adjust-break" placeholder="How long do you want to take a break?">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-lg" id="adjust-break-button"><span style="color: black">Begin
+                        timer</span></button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- BREAK OPTIONS PAGE -->
+<div class="container container-fluid box-style" id="break-page">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4">Break Time!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr class="my-4">
+            <p class="lead">Here are some suggestions for what to do with your break:</p>
+            <a class="btn btn-secondary btn-lg" id="break-button" role="button">Begin Break</a>
+            <a class="btn btn-secondary btn-lg" id="new-break" role="button">Adjust timer</a>
+
+        </div>
+    </div>
+</div>
+
+<!-- BREAK TIMER PAGE -->
+<div class="container container-fluid box-style" id="break-timer">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4">Take a break for
+                <span id="break-time">
+                    {{!-- timer here --}}
+                </span> minutes!</h1>
+        </div>
+    </div>
+</div>
