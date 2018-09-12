@@ -1,5 +1,10 @@
 var db = require("../models");
 var passport = require("../config/passport");
+require("dotenv").config();
+var keys = require("../keys");
+var Spotify = require("node-spotify-api");
+var spotify = new Spotify(keys.spotify);
+var fetch = require("node-fetch");
 
 module.exports = function (app) {
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
@@ -28,6 +33,30 @@ module.exports = function (app) {
         });
       }
     });
+  });
+
+  app.post("/api/spotify", function(req, res) {
+    console.log(req.body);
+    spotify.search({type: 'track', query: req.body.songName}, function(err, data){
+      if(err) {
+          console.log('Error occurred: ' + err);
+      }
+
+      console.log(data.tracks.items[0].uri);
+      var token = "BQD-hx-R5anxqTmXsmDMAQT3vPHZFO-nZSNA8DBaoH7EN9Hu4wbkBreO69W0_DHA1Vw6Nfyf90FKUgjWl8XZenaftMg6IneJpqqQBLGd0DQm4SAMXIDoU3ueROsfccOu9Ho3KE7TQfJxTevL3K19rVG9Vozed0i7LoMaC58gZ7PFmlukpnA";
+
+      fetch('https://api.spotify.com/v1/playlists/24eowb9lZkZezxXVxpm4cp/tracks?uris=' + data.tracks.items[0].uri, {
+          headers: {
+              'Authorization': "Bearer " + token
+          },
+          contentType: 'application/json',
+          method: 'POST'
+      }).then(success => {
+      console.log(success);
+      }).catch(err => {
+          console.log('here is your error', err);
+      })
+  })
   });
 
   // Route for logging user out

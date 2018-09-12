@@ -2,8 +2,11 @@ require("dotenv").config();
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
+<<<<<<< feature/userAuthentication
 var request = require('ajax-request');
 var song = process.argv.slice(2).join(" ");
+=======
+>>>>>>> development
 var fetch = require('node-fetch');
 
 spotify.search({type: 'track', query: song}, function(err, data){
@@ -20,9 +23,12 @@ spotify.search({type: 'track', query: song}, function(err, data){
         },
         contentType: 'application/json',
         method: 'POST'
+<<<<<<< feature/userAuthentication
         // body: JSON.stringify({
         //     "uris": [data.tracks.items[0].uri]
         // })
+=======
+>>>>>>> development
     }).then(success => {
     console.log(success);
     }).catch(err => {
