@@ -47,7 +47,25 @@ module.exports = function (app) {
       customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
       customjs: `<script type="text/javascript" src="/js/theAwesomeTimer.js"></script>`
     });
+  });
 
+  // This is where the user will have access to the google API
+  // User will be given option to change the time left on timer and then start the timer
+  app.get("/home", isAuthenticated, function (req, res) {
+    res.render("home", {
+      title: "Focus",
+      customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
+      customjs: `<script type="text/javascript" src="/js/home.js"></script>`
+    });
+  });
+
+  // This is where the user is directed when the timer runs out.
+  app.get("/break", isAuthenticated, function (req, res) {
+    res.render("break", {
+      title: "Break Time",
+      customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
+      customjs: `<script type="text/javascript" src="/js/break.js"></script>`
+    });
   });
 
   // Render 404 page for any unmatched routes

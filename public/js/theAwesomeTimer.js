@@ -1,43 +1,8 @@
-
 //////////////////////////////////////////////////////////////
 //INITIAL PAGE LOAD
 ///////////////////////////////////////////////////////////////
 $(document).ready(function () {
-    $("#focus-timer").hide();
-    $("#break-timer").hide();
-    $("#break-page").hide();
-    $("#adjust-focus-page").hide();
-    $("#adjust-break-page").hide();
-});
-
-///////////////////////////////////////////////////////////////
-// START PAGE
-///////////////////////////////////////////////////////////////
-$("#new-focus").on("click", function () {
-    $("#start-page").hide();
-    $("#adjust-focus-page").show();
-});
-
-///////////////////////////////////////////////////////////////
-// ADJUSTED FOCUS TIME
-///////////////////////////////////////////////////////////////
-$("#adjust-focus-button").on("click", function (event) {
-    event.preventDefault();
-    $("#adjust-focus-page").hide();
-    $("#focus-timer").show();
-    var newDuration = $("#adjust-focus").val().trim() * 60;
-    console.log(newDuration);
-    focusTimer(newDuration);
-});
-
-///////////////////////////////////////////////////////////////
-// DEFAULT FOCUS TIME
-///////////////////////////////////////////////////////////////
-$("#start-button").on("click", function () {
-    $("#start-page").hide();
-    $("#focus-timer").show();
-    var duration = 2;
-    focusTimer(duration);
+    focusTimer(30);
 });
 
 function focusTimer(duration) {
@@ -60,40 +25,39 @@ function focusTimer(duration) {
         if (--timer < 0) {
             stop(count);
             $("#focus-timer").hide();
-            $("#break-page").show();
+            // $.get("/break", function(data) {
+            //     console.log(data);
+            // });
+            // var nextPage = window.location.hostname + "/break";
+            window.location.replace("/break");
         }
+<<<<<<< HEAD
 
     }, 1000);
 }
 
+=======
+    }, 1000);
+}
+>>>>>>> 171d16d8bcd2af17aaf46b2b1e491a622be22a19
 
 ///////////////////////////////////////////////////////////////
-// ADJUSTED BREAK TIME
+// SPOTIFY ADD SONG
 ///////////////////////////////////////////////////////////////
-$("#new-break").on("click", function () {
-    $("#break-page").hide();
-    $("#adjust-break-page").show();
-});
-
-$("#adjust-break-button").on("click", function (event) {
+var spotifyForm = $("form.songSubmit");
+spotifyForm.on("click", function(event){
     event.preventDefault();
-    $("#adjust-break-page").hide();
-    $("#break-timer").show();
-    var newDuration = $("#adjust-break").val().trim() * 60;
-    console.log(newDuration);
-    breakTimer(newDuration);
+    if($("#songName").val() !== ""){
+        $.post("/api/spotify", {
+            songName: $("#songName").val()
+        }).then(function(data){
+            window.location.replace(data);
+        }).catch(function(err){
+            console.log(err);
+        });
+    }
 });
-
-///////////////////////////////////////////////////////////////
-// DEFAULT BREAK TIME
-///////////////////////////////////////////////////////////////
-$("#break-button").on("click", function () {
-    console.log("click");
-    $("#break-page").hide();
-    $("#break-timer").show();
-    var duration = 2;
-    breakTimer(duration);
-});
+<<<<<<< HEAD
 
 function breakTimer(duration) {
     var display = document.querySelector("#break-time");
@@ -126,3 +90,5 @@ function breakTimer(duration) {
 function stop(clearTimer) {
     clearInterval(clearTimer);
 }
+=======
+>>>>>>> 171d16d8bcd2af17aaf46b2b1e491a622be22a19
