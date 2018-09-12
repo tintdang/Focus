@@ -43,7 +43,7 @@ $("#start-button").on("click", function () {
 function focusTimer(duration) {
     var display = document.querySelector("#focus-time");
     // var displayTime = "52:00"; May use this for displaying timer
-    
+
     var timer = duration, minutes, seconds;
     var count = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -62,8 +62,9 @@ function focusTimer(duration) {
             $("#focus-timer").hide();
             $("#break-page").show();
         }
-        
+
     }, 1000);
+}
 
 
 ///////////////////////////////////////////////////////////////
@@ -124,3 +125,4 @@ function breakTimer(duration) {
 ///////////////////////////////////////////////////////////////
 function stop(clearTimer) {
     clearInterval(clearTimer);
+}
