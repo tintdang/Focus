@@ -9,10 +9,11 @@
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "root",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
+    "port": 3306,
     "logging": false
   },
   "production": {
