@@ -22,6 +22,7 @@ module.exports = function (app) {
     }
     res.render("signup", {
       title: "Sign Up",
+      customcss: `<link rel="stylesheet" href="/styles/form.css"></link>`,
       customjs: `<script type="text/javascript" src="/js/signup.js"></script>`
     });
   });
@@ -33,6 +34,7 @@ module.exports = function (app) {
     }
     res.render("login", {
       title: "Log In",
+      customcss: `<link rel="stylesheet" href="/styles/form.css"></link>`,
       customjs: `<script type="text/javascript" src="/js/login.js"></script>`
     });
   });

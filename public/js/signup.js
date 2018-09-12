@@ -25,7 +25,13 @@ $(document).ready(function() {
             email: userData.email,
             password: userData.password
         }).then(function(data) {
-            window.location.replace(data);
+            console.log(data)
+            // debugger
+            if (data === "/theAwesomeTimer") {
+                window.location.replace(data);
+            } else {
+                alert(data)
+            }
             //if error throw a bootstrap alert
         }).catch(handleLoginErr);
     }
