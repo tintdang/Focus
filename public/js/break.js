@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#break-timer").hide();
     // $("#break-page").hide();
     // $("#adjust-focus-page").hide();
-    // $("#adjust-break-page").hide();
+    $("#adjust-break-page").hide();
 });
 
 ///////////////////////////////////////////////////////////////
@@ -35,7 +35,7 @@ function breakTimer(duration) {
 
         if (--timer < 0) {
             stop(count);
-            window.location.replace("/");
+            window.location.replace("/home");
         }
     }, 1000);
 }
