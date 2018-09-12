@@ -1,5 +1,4 @@
 
-
 //////////////////////////////////////////////////////////////
 //INITIAL PAGE LOAD
 ///////////////////////////////////////////////////////////////
@@ -7,21 +6,44 @@ $(document).ready(function () {
     $("#focus-timer").hide();
     $("#break-timer").hide();
     $("#break-page").hide();
+    $("#adjust-focus-page").hide();
+    $("#adjust-break-page").hide();
 });
 
 ///////////////////////////////////////////////////////////////
-// FOCUS TIMER
+// START PAGE
 ///////////////////////////////////////////////////////////////
-$("#start-button").on('click', function () {
+$("#new-focus").on("click", function () {
+    $("#start-page").hide();
+    $("#adjust-focus-page").show();
+});
+
+///////////////////////////////////////////////////////////////
+// ADJUSTED FOCUS TIME
+///////////////////////////////////////////////////////////////
+$("#adjust-focus-button").on("click", function (event) {
+    event.preventDefault();
+    $("#adjust-focus-page").hide();
+    $("#focus-timer").show();
+    var newDuration = $("#adjust-focus").val().trim() * 60;
+    console.log(newDuration);
+    focusTimer(newDuration);
+});
+
+///////////////////////////////////////////////////////////////
+// DEFAULT FOCUS TIME
+///////////////////////////////////////////////////////////////
+$("#start-button").on("click", function () {
     $("#start-page").hide();
     $("#focus-timer").show();
-    var duration = 1;
-    var display = document.querySelector('#focus-time');
-    focusTimer(duration, display);
+    var duration = 2;
+    focusTimer(duration);
 });
 
-function focusTimer(duration, display) {
-    var displayTime = "52:00";
+function focusTimer(duration) {
+    var display = document.querySelector("#focus-time");
+    // var displayTime = "52:00"; May use this for displaying timer
+    
     var timer = duration, minutes, seconds;
     var count = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -32,7 +54,7 @@ function focusTimer(duration, display) {
 
         // display.textContent = displayTime;
         // setTimeout(function () {
-        display.textContent = minutes + ":" + seconds
+        display.textContent = minutes + ":" + seconds;
         // }, 1000);
 
         if (--timer < 0) {
@@ -40,27 +62,41 @@ function focusTimer(duration, display) {
             $("#focus-timer").hide();
             $("#break-page").show();
         }
+        
     }, 1000);
 }
 
 ///////////////////////////////////////////////////////////////
-// BREAK TIMER
+// ADJUSTED BREAK TIME
 ///////////////////////////////////////////////////////////////
+$("#new-break").on("click", function () {
+    $("#break-page").hide();
+    $("#adjust-break-page").show();
+});
 
+$("#adjust-break-button").on("click", function (event) {
+    event.preventDefault();
+    $("#adjust-break-page").hide();
+    $("#break-timer").show();
+    var newDuration = $("#adjust-break").val().trim() * 60;
+    console.log(newDuration);
+    breakTimer(newDuration);
+});
 
-$("#break-button").on('click', function () {
+///////////////////////////////////////////////////////////////
+// DEFAULT BREAK TIME
+///////////////////////////////////////////////////////////////
+$("#break-button").on("click", function () {
     console.log("click");
     $("#break-page").hide();
     $("#break-timer").show();
-    var duration = 1;
-    var display = document.querySelector('#break-time');
-    breakTimer(duration, display);
+    var duration = 2;
+    breakTimer(duration);
 });
 
-
-// Break Timer
-function breakTimer(duration, display) {
-    var displayTime = "17:00";
+function breakTimer(duration) {
+    var display = document.querySelector("#break-time");
+    // var displayTime = "17:00"; May use this for displaying timer
     var timer = duration, minutes, seconds;
     var count = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -71,7 +107,7 @@ function breakTimer(duration, display) {
 
         // display.textContent = displayTime;
         // setTimeout(function () {
-        display.textContent = minutes + ":" + seconds
+        display.textContent = minutes + ":" + seconds;
         // }, 1000);
 
         if (--timer < 0) {
@@ -82,7 +118,9 @@ function breakTimer(duration, display) {
     }, 1000);
 }
 
-// TIMER STOP
+///////////////////////////////////////////////////////////////
+// STOP TIMER
+///////////////////////////////////////////////////////////////
 function stop(clearTimer) {
     clearInterval(clearTimer);
-};
+}
