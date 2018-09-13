@@ -1,5 +1,5 @@
 body {
-    background: url(../img/timer.jpg);
+    background: url(../img/timer.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .box-style {
