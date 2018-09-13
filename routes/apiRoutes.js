@@ -13,9 +13,8 @@ module.exports = function (app) {
     res.json("/home");
   });
 
+  // POST request in order to add new user to database
   app.post("/api/signup", function (req, res) {
-    // check if user email is created.
-    // console.log(req.body);
     db.User.findOne({
       where: {email: req.body.email}
     }).then(function(existingEmail) {
@@ -35,16 +34,17 @@ module.exports = function (app) {
     });
   });
 
+  // POST request to Spotify API in order to add a new song to playlist 'Focus'
   app.post("/api/spotify", function(req, res) {
     console.log(req.body);
     spotify.search({type: 'track', query: req.body.songName}, function(err, data){
       if(err) {
           console.log('Error occurred: ' + err);
       }
-
-      console.log(data.tracks.items[0].uri);
+      // Authorization token for Spotify. Must refresh new token every hour.
       var token = "BQDYS6aOFrCGXIuf3MmT67No-QrYVSZBhgRhqhgupRpIISYzCNP9EG1D-qPA9gER_Ln12vuLJYX-_lSFPijre7ZwueJfckBxoxNXcZodmM-Xv_hKec4jEdGXL9OdKrepFoXBvhQfpTCQvjtQP2aaaZRo5Vshu0DLyY-SMz5FoqztKG6sq60";
 
+      // AJAX call using npm fetch
       fetch('https://api.spotify.com/v1/playlists/24eowb9lZkZezxXVxpm4cp/tracks?uris=' + data.tracks.items[0].uri, {
           headers: {
               'Authorization': "Bearer " + token
@@ -53,6 +53,8 @@ module.exports = function (app) {
           method: 'POST'
       }).then(success => {
         console.log(success);
+
+        // Reload the awesome timer page to display new songs on spotify playlist on screen
         res.json("/theAwesomeTimer");
       }).catch(err => {
           console.log('here is your error', err);
