@@ -13,6 +13,10 @@ body {
     color: black;
 }
 
+#map {
+    height: 400px;
+}
+
 
 #break-timer, #adjust-break-page, #adjust-focus-page, #spotifyDiv, #lofiDiv{
     display: none;
