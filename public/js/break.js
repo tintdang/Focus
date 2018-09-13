@@ -17,11 +17,13 @@ $("#break-button").on("click", function () {
 $("#catButton").on("click", function () {
     $("#catButton").hide();
     $("#catDiv").show();
+    $("#noCatButton").show();
 });
 
 $("#noCatButton").on("click", function() {
     $("#catDiv").hide();
     $("#catButton").show();
+    $("#noCatButton").hide();
 });
 
 function breakTimer(duration) {

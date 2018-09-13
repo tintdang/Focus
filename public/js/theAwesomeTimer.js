@@ -10,21 +10,25 @@ $(document).ready(function () {
 $("#spotifyShow").on("click", function() {
     $("#spotifyShow").hide();
     $("#spotifyDiv").show();
+    $("#spotifyHide").show();
 });
 
 $("#lofiShow").on("click", function() {
     $("#lofiShow").hide();
     $("#lofiDiv").show();
+    $("#lofiHide").show();
 });
 
 $("#lofiHide").on("click", function() {
     $("#lofiShow").show();
     $("#lofiDiv").hide();
+    $("#lofiHide").hide();
 });
 
 $("#spotifyHide").on("click", function() {
     $("#spotifyShow").show();
     $("#spotifyDiv").hide();
+    $("#spotifyHide").hide();
 });
 
 function focusTimer(duration) {
