@@ -43,7 +43,7 @@ module.exports = function (app) {
       }
 
       console.log(data.tracks.items[0].uri);
-      var token = "BQAZG3mF5PrH-hqy9IvucY9Y30LT0pRGP9CgflMSUQqr-rEwBEdlK3qUt_hTpfCkCbNLXGWW4DzvfmujF7SiYkbLSGFUA51kThuKlhXI3eI7MNo1uDZHPiz-PRicITeqNpfmKQXbs9J5CmjsEcNbkhbKgVyM5a2OXCurkJ5Gzddv5ZwKyOc";
+      var token = "BQDT28vpNOjbTqN3mE3FbWx7Mb5DbngtWWE93YGFljUotYmGX2WLyOfA2WSJBxKlfd2tUDHFykWrKjTig97YyKMu8xQug189Lx3L-MB5pKUnysyuVK94aj8R0TOfvYaUJHdXOC3jUGv6YtBGrNAn29q0dSqZrhnaAUw7iiB-3yub0IqbcXQ";
 
       fetch('https://api.spotify.com/v1/playlists/24eowb9lZkZezxXVxpm4cp/tracks?uris=' + data.tracks.items[0].uri, {
           headers: {

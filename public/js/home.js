@@ -8,7 +8,8 @@ $(document).ready(function () {
     // $("#break-page").hide();
     $("#adjust-focus-page").hide();
     // $("#adjust-break-page").hide();
-    focusTimer(30);
+    // focusTimer(30);
+    localStorage.removeItem("time");
 });
 
 ///////////////////////////////////////////////////////////////
@@ -29,6 +30,7 @@ $("#adjust-focus-button").on("click", function (event) {
     var newDuration = $("#adjust-focus").val().trim() * 60;
     console.log(newDuration);
     // focusTimer(newDuration);
+    window.location.replace("/theAwesomeTimer");
 });
 
 ///////////////////////////////////////////////////////////////
@@ -37,6 +39,7 @@ $("#adjust-focus-button").on("click", function (event) {
 $("#start-button").on("click", function () {
     // $("#start-page").hide();
     // $("#focus-timer").show();
-    var duration = 2;
-    focusTimer(duration);
+    // var duration = 2;
+    // focusTimer(duration);
+    window.location.replace("/theAwesomeTimer");
 });
