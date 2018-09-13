@@ -55,7 +55,7 @@ module.exports = function (app) {
     res.render("home", {
       title: "Focus",
       customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
-      customjs: `<script type="text/javascript" src="/js/home.js"></script>`
+      customjs: `<script type="text/javascript" src="/js/home.js"></script>\n<script src="/js/maps.js"></script>\n<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0N9-tpLZLryr1_wcWc2EGbNcqnwRbQG0&libraries=places"></script>`
     });
   });
 

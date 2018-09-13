@@ -1,5 +1,3 @@
-<a href="/logout">Log Out Here</a>
-
 <!-- FOCUS TIMER PAGE -->
 <div class="container container-fluid box-style" id="focus-timer">
     <div class="row">
@@ -8,18 +6,38 @@
                 <span id="focus-time">
                     {{!-- timer here --}}
                 </span> minutes!</h1>
+            <br>
+            <button class="btn btn-secondary btn-lg" id="spotifyShow">Show Spotify</button>
+            <button class="btn btn-secondary btn-lg" id="spotifyHide">Hide Spotify</button>
+            <button class="btn btn-secondary btn-lg" id="lofiShow">Show Lo-fi</button>
+            <button class="btn btn-secondary btn-lg" id="lofiHide">Hide Lo-fi</button>
+            <br><br>
         </div>
     </div>
     <div class="row">
-            <div class="col-12">
-                <iframe src="https://open.spotify.com/embed/user/jhyunminkim/playlist/24eowb9lZkZezxXVxpm4cp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <h3>Focus Playlist</h3>
-                <h5>Add new songs to the playlist by searching a songname below!</h5>
-                <form class="songSubmit">
-                    <label for="songName">Song Title:</label>
-                    <input id="songName" type="text" placeholder="Type Song Name">
-                    <a href="/theAwesomeTimer"><button id="songButton" type="submit">Add Song</button></a>
-                </form>
-            </div>
+        <div class="col-12" id="spotifyDiv">
+            <iframe src="https://open.spotify.com/embed/user/jhyunminkim/playlist/24eowb9lZkZezxXVxpm4cp" width="300"
+                height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <h3>Focus Playlist</h3>
+            <h5>Add new songs to the playlist by searching a songname below!</h5>
+            <form class="songSubmit">
+                <label for="songName">Song Title:</label>
+                <input id="songName" type="text" placeholder="Type Song Name">
+                <button id="songButton" type="submit">Add Song</button>
+            </form>
+            <br>
+
+            <br><br>
         </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-12" id="lofiDiv">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hHW1oY26kxQ" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            <br>
+        </div>
+    </div>
+    <a class="logout btn btn-secondary btn-sm" href="/logout">Log Out</a>
 </div>

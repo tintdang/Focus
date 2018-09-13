@@ -1,14 +1,8 @@
-
 //////////////////////////////////////////////////////////////
 //INITIAL PAGE LOAD
 ///////////////////////////////////////////////////////////////
 $(document).ready(function () {
-    // $("#focus-timer").hide();
-    // $("#break-timer").hide();
-    // $("#break-page").hide();
-    $("#adjust-focus-page").hide();
-    // $("#adjust-break-page").hide();
-    focusTimer(30);
+    localStorage.removeItem("time");
 });
 
 ///////////////////////////////////////////////////////////////
@@ -19,24 +13,32 @@ $("#new-focus").on("click", function () {
     $("#adjust-focus-page").show();
 });
 
+$("#mapButton").on("click", function() {
+    $("#mapDiv").show();
+    $("#mapButton").hide();
+    $("#mapHide").show();
+});
+
+$("#mapHide").on("click", function() {
+    $("#mapDiv").hide();
+    $("#mapButton").show();
+    $("#mapHide").hide();
+});
+
 ///////////////////////////////////////////////////////////////
 // ADJUSTED FOCUS TIME
 ///////////////////////////////////////////////////////////////
 $("#adjust-focus-button").on("click", function (event) {
     event.preventDefault();
-    // $("#adjust-focus-page").hide();
-    // $("#focus-timer").show();
     var newDuration = $("#adjust-focus").val().trim() * 60;
+    localStorage.setItem("time", newDuration);
     console.log(newDuration);
-    // focusTimer(newDuration);
+    window.location.replace("/theAwesomeTimer");
 });
 
 ///////////////////////////////////////////////////////////////
 // DEFAULT FOCUS TIME
 ///////////////////////////////////////////////////////////////
 $("#start-button").on("click", function () {
-    // $("#start-page").hide();
-    // $("#focus-timer").show();
-    var duration = 2;
-    focusTimer(duration);
+    window.location.replace("/theAwesomeTimer");
 });
