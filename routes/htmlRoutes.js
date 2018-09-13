@@ -45,7 +45,7 @@ module.exports = function (app) {
     res.render("theAwesomeTimer", {
       title: "The REAL Timer",
       customcss: `<link rel="stylesheet" href="/styles/timer.css"></link>`,
-      customjs: `<script type="text/javascript" src="/js/theAwesomeTimer.js"></script>`
+      customjs: `<script type="text/javascript" src="/js/theAwesomeTimer.js"></script>\n<script src="/js/maps.js"></script>\n<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0N9-tpLZLryr1_wcWc2EGbNcqnwRbQG0&libraries=places"></script>`
     });
   });
 
