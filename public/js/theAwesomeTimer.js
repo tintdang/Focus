@@ -12,25 +12,25 @@ $(document).ready(function () {
 ///////////////////////////////////////////////////////////////
 $("#spotifyShow").on("click", function() {
     $("#spotifyShow").hide();
-    $("#spotifyDiv").show();
+    $(".spotifyDiv").show();
     $("#spotifyHide").show();
 });
 
 $("#lofiShow").on("click", function() {
     $("#lofiShow").hide();
-    $("#lofiDiv").show();
+    $(".lofiDiv").show();
     $("#lofiHide").show();
 });
 
 $("#lofiHide").on("click", function() {
     $("#lofiShow").show();
-    $("#lofiDiv").hide();
+    $(".lofiDiv").hide();
     $("#lofiHide").hide();
 });
 
 $("#spotifyHide").on("click", function() {
     $("#spotifyShow").show();
-    $("#spotifyDiv").hide();
+    $(".spotifyDiv").hide();
     $("#spotifyHide").hide();
 });
 

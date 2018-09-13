@@ -17,7 +17,11 @@ body {
     height: 400px;
 }
 
-#break-timer, #adjust-break-page, #adjust-focus-page, #spotifyDiv, #lofiDiv, #mapHide, #mapDiv, #lofiHide, #spotifyHide, #noCatButton, #hideWorkoutButton, #workoutDiv{
+#focus-time {
+    font-size: 8.5rem;
+}
+
+#break-timer, #adjust-break-page, #adjust-focus-page, .spotifyDiv, .lofiDiv, #mapHide, #mapDiv, #lofiHide, #spotifyHide, #noCatButton, #hideWorkoutButton, #workoutDiv{
     display: none;
 }
 
