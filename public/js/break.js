@@ -45,8 +45,10 @@ function breakTimer(duration) {
 
         if (--timer < 0) {
             stop(count);
+            localStorage.removeItem("time");
             window.location.replace("/home");
         }
+        localStorage.setItem("time", timer);
     }, 1000);
 }
 
