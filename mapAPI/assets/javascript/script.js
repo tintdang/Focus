@@ -53,7 +53,7 @@ function createMarker(place) {
     map: map,
     position: place.geometry.location
   });
-
+ //function for bringing up location name
   google.maps.event.addListener(marker, 'click', function() {
     infowindow = new google.maps.InfoWindow();
     console.log(infowindow);
