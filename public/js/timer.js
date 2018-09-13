@@ -15,7 +15,7 @@ $(document).ready(function () {
 $("#start-button").on("click", function () {
     $("#start-page").hide();
     $("#focus-timer").show();
-    var duration = 1;
+    var duration = 3120;
     var display = document.querySelector("#focus-time");
     focusTimer(duration, display);
 });
@@ -52,7 +52,7 @@ $("#break-button").on("click", function () {
     console.log("click");
     $("#break-page").hide();
     $("#break-timer").show();
-    var duration = 1;
+    var duration = 1020;
     var display = document.querySelector("#break-time");
     breakTimer(duration, display);
 });

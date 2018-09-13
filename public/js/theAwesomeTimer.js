@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////////
 var timer;
 $(document).ready(function () {
-    focusTimer(30);
+    focusTimer(3120);
     $("#focus-time").text("00:00");
 });
 

@@ -10,7 +10,7 @@ $("#break-button").on("click", function () {
     console.log("click");
     $("#break-page").hide();
     $("#break-timer").show();
-    var duration = 2;
+    var duration = 1020;
     breakTimer(duration);
 });
 
