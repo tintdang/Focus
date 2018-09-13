@@ -1,0 +1,16 @@
+{
+  "name": "googleAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "google.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.2.0"
+  }
+}

@@ -1,0 +1,25 @@
+<a href="/logout">Log Out Here</a>
+
+<!-- FOCUS TIMER PAGE -->
+<div class="container container-fluid box-style" id="focus-timer">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4">Keep focusing for
+                <span id="focus-time">
+                    {{!-- timer here --}}
+                </span> minutes!</h1>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-12">
+                <iframe src="https://open.spotify.com/embed/user/jhyunminkim/playlist/24eowb9lZkZezxXVxpm4cp" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <h3>Focus Playlist</h3>
+                <h5>Add new songs to the playlist by searching a songname below!</h5>
+                <form class="songSubmit">
+                    <label for="songName">Song Title:</label>
+                    <input id="songName" type="text" placeholder="Type Song Name">
+                    <a href="/theAwesomeTimer"><button id="songButton" type="submit">Add Song</button></a>
+                </form>
+            </div>
+        </div>
+</div>
