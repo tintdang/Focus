@@ -25,11 +25,9 @@ body {
     display: none;
 } */
 
-#logout {
-    background-color: white;
-    padding: 5px 5px;
-    color: black;
+.logout {
     font-family: 'Courier New', Courier, monospace;
+    float: right;
 }
 
 /* #adjust-focus-page {
