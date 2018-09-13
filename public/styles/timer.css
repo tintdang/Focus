@@ -17,8 +17,7 @@ body {
     height: 400px;
 }
 
-
-#break-timer, #adjust-break-page, #adjust-focus-page, #spotifyDiv, #lofiDiv{
+#break-timer, #adjust-break-page, #adjust-focus-page, #spotifyDiv, #lofiDiv, #mapHide, #mapDiv, #lofiHide, #spotifyHide, #noCatButton{
     display: none;
 }
 
@@ -26,11 +25,9 @@ body {
     display: none;
 } */
 
-#logout {
-    background-color: white;
-    padding: 5px 5px;
-    color: black;
+.logout {
     font-family: 'Courier New', Courier, monospace;
+    float: right;
 }
 
 /* #adjust-focus-page {

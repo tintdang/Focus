@@ -1,5 +1,3 @@
-<a id="logout" href="/logout">Log Out Here</a>
-
 <!-- FOCUS TIMER PAGE -->
 <div class="container container-fluid box-style" id="focus-timer">
     <div class="row">
@@ -10,7 +8,9 @@
                 </span> minutes!</h1>
             <br>
             <button class="btn btn-secondary btn-lg" id="spotifyShow">Show Spotify</button>
-            <button class="btn btn-secondary btn-lg" id="lofiShow">Lo-fi Hip Hop</button>
+            <button class="btn btn-secondary btn-lg" id="spotifyHide">Hide Spotify</button>
+            <button class="btn btn-secondary btn-lg" id="lofiShow">Show Lo-fi</button>
+            <button class="btn btn-secondary btn-lg" id="lofiHide">Hide Lo-fi</button>
             <br><br>
         </div>
     </div>
@@ -26,22 +26,18 @@
                 <button id="songButton" type="submit">Add Song</button>
             </form>
             <br>
-            <button class="btn btn-secondary btn-lg" id="spotifyHide">Hide Spotify</button>
+
             <br><br>
         </div>
+
+
     </div>
     <div class="row">
         <div class="col-12" id="lofiDiv">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/hHW1oY26kxQ" frameborder="0" allow="autoplay; encrypted-media"
                 allowfullscreen></iframe>
             <br>
-            <button class="btn btn-secondary btn-lg" id="lofiHide">Hide Lofi</button>
-            <br><br>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <div id="map"></div>
-        </div>
-    </div>
+    <a class="logout btn btn-secondary btn-sm" href="/logout">Log Out</a>
 </div>

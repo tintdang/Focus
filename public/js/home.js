@@ -13,6 +13,18 @@ $("#new-focus").on("click", function () {
     $("#adjust-focus-page").show();
 });
 
+$("#mapButton").on("click", function() {
+    $("#mapDiv").show();
+    $("#mapButton").hide();
+    $("#mapHide").show();
+});
+
+$("#mapHide").on("click", function() {
+    $("#mapDiv").hide();
+    $("#mapButton").show();
+    $("#mapHide").hide();
+});
+
 ///////////////////////////////////////////////////////////////
 // ADJUSTED FOCUS TIME
 ///////////////////////////////////////////////////////////////
