@@ -8,10 +8,14 @@
                 <span id="focus-time">
                     {{!-- timer here --}}
                 </span> minutes!</h1>
+            <br>
+            <button class="btn btn-secondary btn-lg" id="spotifyShow">Show Spotify</button>
+            <button class="btn btn-secondary btn-lg" id="lofiShow">Lo-fi Hip Hop</button>
+            <br><br>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12" id="spotifyDiv">
             <iframe src="https://open.spotify.com/embed/user/jhyunminkim/playlist/24eowb9lZkZezxXVxpm4cp" width="300"
                 height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             <h3>Focus Playlist</h3>
@@ -21,12 +25,23 @@
                 <input id="songName" type="text" placeholder="Type Song Name">
                 <button id="songButton" type="submit">Add Song</button>
             </form>
+            <br>
+            <button class="btn btn-secondary btn-lg" id="spotifyHide">Hide Spotify</button>
+            <br><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="lofiDiv">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hHW1oY26kxQ" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            <br>
+            <button class="btn btn-secondary btn-lg" id="lofiHide">Hide Lofi</button>
+            <br><br>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
             <div id="map"></div>
-            <h1>the map should be here</h1>
         </div>
     </div>
 </div>

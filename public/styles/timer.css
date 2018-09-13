@@ -18,13 +18,13 @@ body {
 }
 
 
-#break-timer{
+#break-timer, #adjust-break-page, #adjust-focus-page, #spotifyDiv, #lofiDiv{
     display: none;
 }
 
-#adjust-break-page {
+/* #adjust-break-page {
     display: none;
-}
+} */
 
 #logout {
     background-color: white;
@@ -33,6 +33,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#adjust-focus-page {
+/* #adjust-focus-page {
     display: none;
-}
+} */

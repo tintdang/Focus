@@ -27,7 +27,7 @@ $(document).ready(function() {
         }).then(function(data) {
             console.log(data)
             // debugger
-            if (data === "/theAwesomeTimer") {
+            if (data === "/home") {
                 window.location.replace(data);
             } else {
                 alert(data)
