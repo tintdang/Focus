@@ -1,9 +1,6 @@
 $(document).ready(function () {
-    // $("#focus-timer").hide();
-    $("#break-timer").hide();
-    // $("#break-page").hide();
-    // $("#adjust-focus-page").hide();
-    $("#adjust-break-page").hide();
+    $("#catDiv").hide();
+    $("#break-time").text("00:00");
 });
 
 ///////////////////////////////////////////////////////////////
@@ -17,9 +14,18 @@ $("#break-button").on("click", function () {
     breakTimer(duration);
 });
 
+$("#catButton").on("click", function () {
+    $("#catButton").hide();
+    $("#catDiv").show();
+});
+
+$("#noCatButton").on("click", function() {
+    $("#catDiv").hide();
+    $("#catButton").show();
+});
+
 function breakTimer(duration) {
-    var display = document.querySelector("#break-time");
-    // var displayTime = "17:00"; May use this for displaying timer
+    var display = $("#break-time");
     var timer = duration, minutes, seconds;
     var count = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -27,11 +33,7 @@ function breakTimer(duration) {
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        // display.textContent = displayTime;
-        // setTimeout(function () {
-        display.textContent = minutes + ":" + seconds;
-        // }, 1000);
+        display.text(minutes + ":" + seconds);
 
         if (--timer < 0) {
             stop(count);
@@ -47,6 +49,7 @@ function breakTimer(duration) {
 $("#new-break").on("click", function () {
     $("#break-page").hide();
     $("#adjust-break-page").show();
+
 });
 
 $("#adjust-break-button").on("click", function (event) {
