@@ -3,10 +3,13 @@
 ///////////////////////////////////////////////////////////////
 var timer;
 $(document).ready(function () {
-    focusTimer(30);
+    focusTimer(3120);
     $("#focus-time").text("00:00");
 });
 
+///////////////////////////////////////////////////////////////
+// Button click listeners
+///////////////////////////////////////////////////////////////
 $("#spotifyShow").on("click", function() {
     $("#spotifyShow").hide();
     $("#spotifyDiv").show();
@@ -31,12 +34,13 @@ $("#spotifyHide").on("click", function() {
     $("#spotifyHide").hide();
 });
 
+///////////////////////////////////////////////////////////////
+// FOCUS TIMER
+///////////////////////////////////////////////////////////////
 function focusTimer(duration) {
     var display = $("#focus-time");
-
     var minutes = 0;
     var seconds = 0;
-    // var displayTime = "52:00"; May use this for displaying timer
     console.log(localStorage.getItem("time"));
     console.log("Duration: " + duration);
 
