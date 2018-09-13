@@ -28,3 +28,7 @@ body {
     color: black;
     font-family: 'Courier New', Courier, monospace;
 }
+
+#adjust-focus-page {
+    display: none;
+}

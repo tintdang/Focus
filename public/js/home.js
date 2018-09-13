@@ -2,7 +2,6 @@
 //INITIAL PAGE LOAD
 ///////////////////////////////////////////////////////////////
 $(document).ready(function () {
-    $("#adjust-focus-page").hide();
     localStorage.removeItem("time");
 });
 
