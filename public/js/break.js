@@ -49,7 +49,6 @@ function breakTimer(duration) {
 $("#new-break").on("click", function () {
     $("#break-page").hide();
     $("#adjust-break-page").show();
-
 });
 
 $("#adjust-break-button").on("click", function (event) {
