@@ -7,6 +7,26 @@ $(document).ready(function () {
     $("#focus-time").text("00:00");
 });
 
+$("#spotifyShow").on("click", function() {
+    $("#spotifyShow").hide();
+    $("#spotifyDiv").show();
+});
+
+$("#lofiShow").on("click", function() {
+    $("#lofiShow").hide();
+    $("#lofiDiv").show();
+});
+
+$("#lofiHide").on("click", function() {
+    $("#lofiShow").show();
+    $("#lofiDiv").hide();
+});
+
+$("#spotifyHide").on("click", function() {
+    $("#spotifyShow").show();
+    $("#spotifyDiv").hide();
+});
+
 function focusTimer(duration) {
     var display = $("#focus-time");
 
