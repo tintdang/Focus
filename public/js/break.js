@@ -1,16 +1,19 @@
+//////////////////////////////////////////////////////////////
+//INITIAL PAGE LOAD
+///////////////////////////////////////////////////////////////
 $(document).ready(function () {
     $("#catDiv").hide();
     $("#break-time").text("00:00");
 });
 
 ///////////////////////////////////////////////////////////////
-// DEFAULT BREAK TIME
+// Button click listeners
 ///////////////////////////////////////////////////////////////
 $("#break-button").on("click", function () {
     console.log("click");
     $("#break-page").hide();
     $("#break-timer").show();
-    var duration = 2;
+    var duration = 1020;
     breakTimer(duration);
 });
 
@@ -26,6 +29,9 @@ $("#noCatButton").on("click", function() {
     $("#noCatButton").hide();
 });
 
+///////////////////////////////////////////////////////////////
+// DEFAULT BREAK TIME
+///////////////////////////////////////////////////////////////
 function breakTimer(duration) {
     var display = $("#break-time");
     var timer = duration, minutes, seconds;
