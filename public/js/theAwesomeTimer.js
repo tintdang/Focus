@@ -68,6 +68,7 @@ function focusTimer(duration) {
             localStorage.removeItem("time");
             window.location.replace("/break");
         }
+        localStorage.setItem("time", timer);
     }, 1000);
 }
 
@@ -81,8 +82,6 @@ spotifyForm.on("click", function(event){
         $.post("/api/spotify", {
             songName: $("#songName").val()
         }).then(function(data){
-            // Store the time
-            localStorage.setItem("time", timer);
             window.location.replace(data);
         }).catch(function(err){
             console.log(err);
