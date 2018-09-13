@@ -25,6 +25,10 @@ body {
     display: none;
 }
 
+#lofiHide, #spotifyHide {
+    color: black;
+}
+
 .logout {
     font-family: 'Courier New', Courier, monospace;
     float: right;
