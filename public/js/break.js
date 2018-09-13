@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    $("#break-timer").hide();
-    $("#adjust-break-page").hide();
+    $("#catDiv").hide();
     $("#break-time").text("00:00");
 });
 
@@ -13,6 +12,16 @@ $("#break-button").on("click", function () {
     $("#break-timer").show();
     var duration = 2;
     breakTimer(duration);
+});
+
+$("#catButton").on("click", function () {
+    $("#catButton").hide();
+    $("#catDiv").show();
+});
+
+$("#noCatButton").on("click", function() {
+    $("#catDiv").hide();
+    $("#catButton").show();
 });
 
 function breakTimer(duration) {
@@ -40,6 +49,7 @@ function breakTimer(duration) {
 $("#new-break").on("click", function () {
     $("#break-page").hide();
     $("#adjust-break-page").show();
+
 });
 
 $("#adjust-break-button").on("click", function (event) {

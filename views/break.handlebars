@@ -1,21 +1,4 @@
-<!-- ADJUST BREAK PAGE -->
-<div class="container container-fluid box-style" id="adjust-break-page">
-    <div class="row">
-        <div class="col-12">
-            <form>
-                <div class="form-group">
-                    <h1 class="display-5">Adjust Break</h1>
-                    <label for="adjust-break">New break time (minutes)</label>
-                    <input type="text" class="form-control" id="adjust-break" placeholder="How long do you want to take a break?">
-                </div>
-                <button type="submit" class="btn btn-secondary btn-lg" id="adjust-break-button"><span style="color: black">Begin
-                        timer</span></button>
-            </form>
-        </div>
-
-    </div>
-</div>
-
+<a id="logout" href="/logout">Log Out Here</a>
 
 <!-- BREAK OPTIONS PAGE -->
 <div class="container container-fluid box-style" id="break-page">
@@ -35,6 +18,26 @@
     </div>
 </div>
 
+<!-- ADJUST BREAK PAGE -->
+<div class="container container-fluid box-style" id="adjust-break-page">
+    <div class="row">
+        <div class="col-12">
+            <form>
+                <div class="form-group">
+                    <h1 class="display-5">Adjust Break</h1>
+                    <label for="adjust-break">New break time (minutes)</label>
+                    <input type="text" class="form-control" id="adjust-break" placeholder="How long do you want to take a break?">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-lg" id="adjust-break-button"><span style="color: black">Begin
+                        timer</span></button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
 <!-- BREAK TIMER PAGE -->
 <div class="container container-fluid box-style" id="break-timer">
     <div class="row">
@@ -42,7 +45,17 @@
             <h1 class="display-4">Take a break for
                 <span id="break-time">
                     {{!-- timer here --}}
-                </span> minutes!</h1>
+                </span> minutes!
+            </h1>
+            <br>
+            <button id="catButton">Cat Videos</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="catDiv">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rNSnfXl1ZjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <br>
+            <button id="noCatButton">No More Cats</button>
         </div>
     </div>
 </div>
