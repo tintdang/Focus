@@ -29,6 +29,18 @@ $("#noCatButton").on("click", function() {
     $("#noCatButton").hide();
 });
 
+$("#workoutButton").on("click", function() {
+    $("#workoutButton").hide();
+    $("#workoutDiv").show();
+    $("#hideWorkoutButton").show();
+});
+
+$("#hideWorkoutButton").on("click", function() {
+    $("#workoutButton").show();
+    $("#workoutDiv").hide();
+    $("#hideWorkoutButton").hide();
+});
+
 ///////////////////////////////////////////////////////////////
 // DEFAULT BREAK TIME
 ///////////////////////////////////////////////////////////////
