@@ -4,6 +4,7 @@
 var timer;
 $(document).ready(function () {
     focusTimer(30);
+    $("#focus-time").text("00:00");
 });
 
 function focusTimer(duration) {
@@ -14,14 +15,16 @@ function focusTimer(duration) {
     // var displayTime = "52:00"; May use this for displaying timer
     console.log(localStorage.getItem("time"));
     console.log("Duration: " + duration);
+
+    //
     if(localStorage.getItem("time") !== null && localStorage.getItem("time") > 0){
         timer = localStorage.getItem("time");
-        console.log("Time is not saved");
     } else{
-        console.log("Time is saved");
         timer = duration;
     }
     console.log("Timer: " + timer);
+
+    // Start the timer
     var count = setInterval(function () {
         console.log(timer);
         minutes = parseInt(timer / 60, 10);
@@ -29,12 +32,7 @@ function focusTimer(duration) {
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-        // console.log("Minutes: " + minutes);
-        // console.log("Seconds: " + seconds);
-        // display.textContent = displayTime;
-        // setTimeout(function () {
-        display.text(minutes + ":" + seconds); //= minutes + ":" + seconds;
-        // }, 1000);
+        display.text(minutes + ":" + seconds);
 
         if (--timer < 0) {
             stop(count);

@@ -3,12 +3,7 @@
 //INITIAL PAGE LOAD
 ///////////////////////////////////////////////////////////////
 $(document).ready(function () {
-    // $("#focus-timer").hide();
-    // $("#break-timer").hide();
-    // $("#break-page").hide();
     $("#adjust-focus-page").hide();
-    // $("#adjust-break-page").hide();
-    // focusTimer(30);
     localStorage.removeItem("time");
 });
 
@@ -25,11 +20,9 @@ $("#new-focus").on("click", function () {
 ///////////////////////////////////////////////////////////////
 $("#adjust-focus-button").on("click", function (event) {
     event.preventDefault();
-    // $("#adjust-focus-page").hide();
-    // $("#focus-timer").show();
     var newDuration = $("#adjust-focus").val().trim() * 60;
+    localStorage.setItem("time", newDuration);
     console.log(newDuration);
-    // focusTimer(newDuration);
     window.location.replace("/theAwesomeTimer");
 });
 
@@ -37,9 +30,5 @@ $("#adjust-focus-button").on("click", function (event) {
 // DEFAULT FOCUS TIME
 ///////////////////////////////////////////////////////////////
 $("#start-button").on("click", function () {
-    // $("#start-page").hide();
-    // $("#focus-timer").show();
-    // var duration = 2;
-    // focusTimer(duration);
     window.location.replace("/theAwesomeTimer");
 });
