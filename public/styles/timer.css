@@ -22,7 +22,7 @@ body {
     color: white;
 }
 
-#focus-time {
+#focus-time, #break-time {
     font-size: 8.5rem;
 }
 
@@ -30,7 +30,7 @@ body {
     display: none;
 }
 
-#lofiHide, #spotifyHide {
+#lofiHide, #spotifyHide, #noCatButton, #hideWorkoutButton {
     color: black;
 }
 
