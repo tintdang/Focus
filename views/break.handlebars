@@ -9,7 +9,7 @@
         <div class="col-12">
             <hr class="my-4">
             <a class="btn btn-secondary btn-lg" id="break-button" role="button">Begin Break</a>
-            <a class="btn btn-secondary btn-lg" id="new-break" role="button">Adjust timer</a>
+            <a class="btn btn-secondary btn-lg" id="new-break" role="button">Adjust Timer</a>
 
         </div>
     </div>
@@ -27,8 +27,7 @@
                     <label for="adjust-break">New break time (minutes)</label>
                     <input type="text" class="form-control" id="adjust-break" placeholder="How long do you want to take a break?">
                 </div>
-                <button type="submit" class="btn btn-secondary btn-lg" id="adjust-break-button"><span style="color: black">Begin
-                        timer</span></button>
+                <button type="submit" class="btn btn-secondary btn-lg" id="adjust-break-button">Begin Timer</button>
             </form>
         </div>
 
@@ -43,11 +42,8 @@
 <div class="container container-fluid box-style" id="break-timer">
     <div class="row">
         <div class="col-12">
-            <h1 class="display-4">Take a break for
-                <span id="break-time">
-                    {{!-- timer here --}}
-                </span> minutes!
-            </h1>
+            <h1 id="break-time" class="center"></h1>
+            <h2 class="display-4">Take a break!</h2>
             <br>
             <button class="btn btn-secondary btn-lg" id="catButton">Show Cat Video</button>
             <button class="btn btn-secondary btn-lg" id="noCatButton">Hide Cat Video</button>
@@ -65,7 +61,7 @@
     </div>
     <div class="row">
         <div class="col-12" id="workoutDiv">
-            {{!-- Cat Video --}}
+            {{!-- Workout Video --}}
             <iframe width="560" height="315" src="https://www.youtube.com/embed/PWEdJRRndkQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <br>
         </div>

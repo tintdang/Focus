@@ -1,13 +1,13 @@
 body {
-    background: url(../img/timer.jpg);
+    background: url(../img/timer.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .box-style {
-    height: 100%;
     width: 100%;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 100px;
+    margin-bottom: 20px;
     padding: 50px;
     background: rgba(231, 234, 237, 0.75);
     color: black;
@@ -17,8 +17,20 @@ body {
     height: 400px;
 }
 
-#break-timer, #adjust-break-page, #adjust-focus-page, #spotifyDiv, #lofiDiv, #mapHide, #mapDiv, #lofiHide, #spotifyHide, #noCatButton, #hideWorkoutButton, #workoutDiv{
+#new-focus, #break-button, #new-break {
+    color: white;
+}
+
+#focus-time, #break-time {
+    font-size: 8.5rem;
+}
+
+#break-timer, #adjust-break-page, #adjust-focus-page, .spotifyDiv, .lofiDiv, #mapHide, #mapDiv, #lofiHide, #spotifyHide, #noCatButton, #hideWorkoutButton, #workoutDiv{
     display: none;
+}
+
+#lofiHide, #spotifyHide, #noCatButton, #hideWorkoutButton {
+    color: black;
 }
 
 .logout {

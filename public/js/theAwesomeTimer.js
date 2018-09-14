@@ -4,7 +4,8 @@
 var timer;
 $(document).ready(function () {
     focusTimer(3120);
-    $("#focus-time").text("00:00");
+    //This will convert the time that is held by local storage and convert it for on load.
+    $("#focus-time").text(convertTimer(localStorage.getItem("time")));
 });
 
 ///////////////////////////////////////////////////////////////
@@ -12,25 +13,25 @@ $(document).ready(function () {
 ///////////////////////////////////////////////////////////////
 $("#spotifyShow").on("click", function() {
     $("#spotifyShow").hide();
-    $("#spotifyDiv").show();
+    $(".spotifyDiv").show();
     $("#spotifyHide").show();
 });
 
 $("#lofiShow").on("click", function() {
     $("#lofiShow").hide();
-    $("#lofiDiv").show();
+    $(".lofiDiv").show();
     $("#lofiHide").show();
 });
 
 $("#lofiHide").on("click", function() {
     $("#lofiShow").show();
-    $("#lofiDiv").hide();
+    $(".lofiDiv").hide();
     $("#lofiHide").hide();
 });
 
 $("#spotifyHide").on("click", function() {
     $("#spotifyShow").show();
-    $("#spotifyDiv").hide();
+    $(".spotifyDiv").hide();
     $("#spotifyHide").hide();
 });
 
@@ -71,6 +72,20 @@ function focusTimer(duration) {
         localStorage.setItem("time", timer);
     }, 1000);
 }
+
+///////////////////////////////////////////////////////////////
+// This converts the current timer into a format that will be used by the clock
+///////////////////////////////////////////////////////////////
+function convertTimer(timer) {
+    console.log(timer);
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    return `${minutes}:${seconds}`;
+}
+
 
 ///////////////////////////////////////////////////////////////
 // SPOTIFY ADD SONG

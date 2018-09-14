@@ -2,10 +2,8 @@
 <div class="container container-fluid box-style" id="focus-timer">
     <div class="row">
         <div class="col-12">
-            <h1 class="display-4">Keep focusing for
-                <span id="focus-time">
-                    {{!-- timer here --}}
-                </span> minutes!</h1>
+            <h1 id="focus-time" class="center"></h1>
+            <h2 class="display-4">Keep Focused!</h2>
             <br>
             <button class="btn btn-secondary btn-lg" id="spotifyShow">Show Spotify</button>
             <button class="btn btn-secondary btn-lg" id="spotifyHide">Hide Spotify</button>
@@ -14,11 +12,22 @@
             <br><br>
         </div>
     </div>
-    <div class="row">
+    <div class="row d-flex align-content-start justify-content-center flex-wrap">
         {{!-- Spotify playlist --}}
-        <div class="col-12" id="spotifyDiv">
-            <iframe src="https://open.spotify.com/embed/user/jhyunminkim/playlist/24eowb9lZkZezxXVxpm4cp" width="300"
+        <div class="col-6 spotifyDiv">
+            <iframe src="https://open.spotify.com/embed/user/jhyunminkim/playlist/24eowb9lZkZezxXVxpm4cp" width="100%"
                 height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+
+        {{!-- LoFi Youtube Video --}}
+        <div class="col-6 lofiDiv">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/hHW1oY26kxQ" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            <br>
+        </div>
+
+        <div class="col-12 spotifyDiv">
             <h3>Focus Playlist</h3>
             <h5>Add new songs to the playlist by searching a songname below!</h5>
             <form class="songSubmit">
@@ -30,18 +39,12 @@
 
             <br><br>
         </div>
+    </div>
 
 
-    </div>
-    <div class="row">
-        {{!-- LoFi Youtube Video --}}
-        <div class="col-12" id="lofiDiv">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hHW1oY26kxQ" frameborder="0" allow="autoplay; encrypted-media"
-                allowfullscreen></iframe>
-            <br>
-        </div>
-    </div>
 
     {{!-- Logout Button --}}
     <a class="logout btn btn-secondary btn-sm" href="/logout">Log Out</a>
+</div>
+
 </div>
