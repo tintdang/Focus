@@ -4,7 +4,7 @@
 var timer;
 $(document).ready(function () {
     focusTimer(3120);
-    $("#focus-time").text("00:00");
+    $("#focus-time").text(convertTimer(localStorage.getItem("time")));
 });
 
 ///////////////////////////////////////////////////////////////
@@ -71,6 +71,20 @@ function focusTimer(duration) {
         localStorage.setItem("time", timer);
     }, 1000);
 }
+
+///////////////////////////////////////////////////////////////
+// This converts the current timer into a format that will be used by the clock
+///////////////////////////////////////////////////////////////
+function convertTimer(timer) {
+    console.log(timer);
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    return `${minutes}:${seconds}`;
+}
+
 
 ///////////////////////////////////////////////////////////////
 // SPOTIFY ADD SONG
