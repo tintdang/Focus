@@ -18,6 +18,10 @@ body {
     height: 400px;
 }
 
+#new-focus {
+    color: white;
+}
+
 #focus-time {
     font-size: 8.5rem;
 }
