@@ -8,6 +8,7 @@ body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 100px;
+    margin-bottom: 20px;
     padding: 50px;
     background: rgba(231, 234, 237, 0.75);
     color: black;
