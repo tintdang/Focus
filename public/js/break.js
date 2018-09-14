@@ -79,6 +79,7 @@ $("#adjust-break-button").on("click", function (event) {
     $("#break-timer").show();
     var newDuration = $("#adjust-break").val().trim() * 60;
     console.log(newDuration);
+    $("#break-time").text(convertTimer(newDuration));
     breakTimer(newDuration);
 });
 
@@ -87,4 +88,17 @@ $("#adjust-break-button").on("click", function (event) {
 ///////////////////////////////////////////////////////////////
 function stop(clearTimer) {
     clearInterval(clearTimer);
+}
+
+///////////////////////////////////////////////////////////////
+// Timer Conversion for displayed timer
+///////////////////////////////////////////////////////////////
+function convertTimer(timer) {
+    console.log(timer);
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    return `${minutes}:${seconds}`;
 }
