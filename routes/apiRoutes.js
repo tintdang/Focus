@@ -42,7 +42,7 @@ module.exports = function (app) {
           console.log('Error occurred: ' + err);
       }
       // Authorization token for Spotify. Must refresh new token every hour.
-      var token = "BQDdRUX_q7I93tY7xDilOQEef9yMQyHpgkxPL3iFSKV1-9BKOwPglo7JJ6vY4eYOkvWlvtTjL7DkHk48y1Y08Eq2wmFLUrN4yt0alpnu1QpywNSbDE7ZAO3rY2Xb57LIwL3o64Cbgvc6EROSwJt3I0vuoA-wOa-7xkBPSNF2UThQWKeXWoM";
+      var token = "BQAdcUHOtlvtRHXl1QWWh1Wwf1pajcA3oRpCkxXEQxS5Q3SO2FDz3vlR8ffanXH_AqfSa6QIeNqxRR_AlqeMnEFZ1sNG1Rn_bcpBI7pMzwz3gd7QzR8lvLnTHapGJ0mMkB4C0tPN-DJKObJvbRH7OdzrwSZ2tINvo5wXB6utIa5rjta0NWI";
 
       // AJAX call using npm fetch
       fetch('https://api.spotify.com/v1/playlists/24eowb9lZkZezxXVxpm4cp/tracks?uris=' + data.tracks.items[0].uri, {
