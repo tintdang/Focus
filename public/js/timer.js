@@ -31,7 +31,6 @@ $("#break-button").on("click", function () {
 // FOCUS TIMER - USED FOR BREAK TIMER
 ///////////////////////////////////////////////////////////////
 function focusTimer(duration, display) {
-    var displayTime = "52:00";
     var timer = duration, minutes, seconds;
     var count = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
@@ -40,10 +39,7 @@ function focusTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        // display.textContent = displayTime;
-        // setTimeout(function () {
         display.textContent = minutes + ":" + seconds;
-        // }, 1000);
 
         if (--timer < 0) {
             stop(count);
@@ -58,7 +54,6 @@ function focusTimer(duration, display) {
 ///////////////////////////////////////////////////////////////
 
 function breakTimer(duration, display) {
-    var displayTime = "17:00";
     var timer = duration, minutes, seconds;
     var count = setInterval(function () {
         minutes = parseInt(timer / 60, 10);
