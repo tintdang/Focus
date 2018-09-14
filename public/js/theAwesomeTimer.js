@@ -4,6 +4,7 @@
 var timer;
 $(document).ready(function () {
     focusTimer(3120);
+    //This will convert the time that is held by local storage and convert it for on load.
     $("#focus-time").text(convertTimer(localStorage.getItem("time")));
 });
 
